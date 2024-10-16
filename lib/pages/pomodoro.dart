@@ -7,19 +7,22 @@ class Pomodoro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pomodoro Timer'),
-      ),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Cronometro(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              EntradaTempo(titulo: 'Trabalho', valor: 25),
-              EntradaTempo(titulo: 'Descanso', valor: 5),
-            ],
+          Expanded(
+            child: Cronometro(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                EntradaTempo(titulo: 'Trabalho', valor: 25),
+                EntradaTempo(titulo: 'Descanso', valor: 5),
+              ],
+            ),
           ),
         ],
       ),

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:timer_pomodoro/components/botao_cronometro.dart';
 
 class Cronometro extends StatelessWidget {
   const Cronometro({super.key});
@@ -13,42 +14,22 @@ class Cronometro extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Hora de Trabalhar',
-              style: TextStyle(color: Colors.white, fontSize: 24)),
-          Text('03:00', style: TextStyle(color: Colors.white, fontSize: 54)),
+              style: TextStyle(color: Colors.white, fontSize: 40)),
+          Text('03:00', style: TextStyle(color: Colors.white, fontSize: 120)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Icons.play_arrow, color: Colors.white),
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll(Colors.black),
-                      shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
-                    ),
-                    label:
-                        Text('Iniciar', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
+              BotaoCronometro(
+                texto: 'Iniciar',
+                icone: Icons.play_arrow,
               ),
-              SizedBox(
-                height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Icons.restart_alt, color: Colors.white),
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll(Colors.black),
-                      shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
-                    ),
-                    label: Text('Reiniciar',
-                        style: TextStyle(color: Colors.white)),
-                  ),
-                ),
+              // BotaoCronometro(
+              //   texto: 'Parar',
+              //   icone: Icons.stop,
+              // ),
+              BotaoCronometro(
+                texto: 'Reiniciar',
+                icone: Icons.refresh,
               ),
             ],
           )
