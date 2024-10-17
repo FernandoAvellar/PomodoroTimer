@@ -1,12 +1,16 @@
-# timer_pomodoro
+## A Pomodoro Timer implementation using Flutter and MobX
 
 A Pomodoro timer developer in Flutter using MobX to manage states.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- Clone the project
+- Execute the commands:
+  > cd <cloned_folder>
+  > flutter pub get
+  > dart run build_runner watch (This command is necessary in order to recreate some files if you make some change in MobX Store)
 
-A few resources to get you started if this is your first Flutter project:
+### A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
