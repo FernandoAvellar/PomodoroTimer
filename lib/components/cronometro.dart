@@ -26,7 +26,7 @@ class Cronometro extends StatelessWidget {
                       : 'Hora de Descansar',
                   style: TextStyle(color: Colors.white, fontSize: 40)),
               Text(
-                  '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padRight(2, '0')}',
+                  '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}',
                   style: TextStyle(color: Colors.white, fontSize: 120)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
